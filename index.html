@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Color Changer</title>
+</head>
+
+<body>
+    <input type="color" id="pickedcolor" value="#ffffff"/>
+    <span id="showhexval">#ffffff</span>
+    <script>
+        const input = document.getElementById("pickedcolor")
+        const output = document.getElementById("showhexval")
+
+        input.addEventListener('input', function (event) {
+            const color = event.target.value;
+            output.innerHTML = color;
+            document.body.style.backgroundColor = color;
+        });
+    </script>
+</body>
+
+</html>
